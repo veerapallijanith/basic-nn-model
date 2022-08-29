@@ -9,8 +9,11 @@ Neural networks consist of simple input/output units called neurons (inspired by
 
 Regression helps in establishing a relationship between a dependent variable and one or more independent variables. Regression models work well only when the regression equation is a good fit for the data. Most regression models will not fit the data perfectly. Although neural networks are complex and computationally expensive, they are flexible and can dynamically pick the best type of regression, and if that is not enough, hidden layers can be added to improve prediction. 
 
+In this neural network model i used 8 in hidden layer1 and 6 in hidden layer2.
+
 ## Neural Network Model
 
+![dl](https://user-images.githubusercontent.com/75234814/187233641-27fb081f-06aa-4f32-abaf-f6c80ce18032.png)
 
 
 ## DESIGN STEPS
@@ -51,13 +54,13 @@ from sklearn.model_selection import train_test_split
 
 from sklearn.preprocessing import MinMaxScaler
 
-df=pd.read_csv("data1.csv")
+df=pd.read_csv("exp.csv")
 
 df.head()
 
-x=df[["Input"]].values
+x=df[["1"]].values
 
-y=df[["Output"]].values
+y=df[["101"]].values
 
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
 
